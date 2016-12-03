@@ -3,15 +3,21 @@ This project is a REST API developed using Laravel.
 
 ##GET
 GET
-/api/projects/
+/api/projects/<br>
+Submitting a GET request to the resource above returns a json array containing a list of all projects in the database.
+For example purposes I omitted the actual json array because it would be too long.
 ```json
 [
- 
+ {},
+ {},
+ {}
 ]
 ```
 
 GET
-/api/projects/{id}
+/api/projects/{id}<br>
+Submitting a request to the resource with a given project Id returns the project,
+the list of sets it's associated with, and the list of parts each project set is associated with
 ```json
 {
   "id": 1,
@@ -64,17 +70,17 @@ GET
 
 GET
 /api/projects/search/{name}<br>
-This allowing the consumer to search for all products by a desired name
+This resource above allows the consumer to search for all products by a name
 
 
 POST
 /api/projects/<br>
-To create a new project sending a post request to this resource with the post body
+To create a new project sending a POST request to this resource with the post body
 ```text
 name=New+fancy+project
 ```
 
-If successful returns
+If successful it returns
 ```json
 {"name":"New fancy project","updated_at":"2016-12-03 02:47:19","created_at":"2016-12-03 02:47:19","id":51}
 ```
@@ -83,20 +89,21 @@ If successful returns
 PUT
 /api/projects/{id}
 
-Submitting a request to this URL with the post body
+To edit an existing project, submitting a PUT request to this URL with the post body
 
 ```text
 name=Demo+4+GitHub
 ```
 
-If successful returns the response
+If successful it returns
 ```json
 {"id":51,"name":"Demo 4 GitHub","created_at":"2016-12-03 02:47:19","updated_at":"2016-12-03 02:50:11"}
 ```
 
 ##Delete
 DELETE
-/api/projects/{id}
+/api/projects/{id}<br>
+Submitting a DELETE request to the resource above with a given project Id deletes that specific project from the database.
 
 ```json
 {"msg":"Item 51 successfully deleted"}
@@ -148,12 +155,3 @@ The final stage of this web panel is to produce a report for a specified project
 
 ##ERD
 <img src="http://i.imgur.com/O0JfNSa.png">
-
-An analogy to understand this ERD is as follows<br>
-A project = a sentence<br>
-A set = a word<br>
-A part = a letter<br>
-
-Therefore, a set can appear in many different projects, and a part can appear in many different sets<br>
-The table _project_set_ is the equivalent of a word<br>
-The table _set_part_ is the equivalent to a letter being added to a string in order to form a word.
