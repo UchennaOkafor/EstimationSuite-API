@@ -1,5 +1,5 @@
 # EstimationSuite-API
-This project is a REST API developed using Laravel. 
+This project is a REST API developed using Laravel. This API compliments the client side C# application I developed.
 
 ##GET
 GET
@@ -77,7 +77,7 @@ POST
 /api/projects/<br>
 To create a new project sending a POST request to this resource with the post body
 ```text
-name=New+fancy+project
+name=New fancy project
 ```
 
 If successful it returns
@@ -92,7 +92,7 @@ PUT
 To edit an existing project, submitting a PUT request to this URL with the post body
 
 ```text
-name=Demo+4+GitHub
+name=Demo 4 GitHub
 ```
 
 If successful it returns
@@ -142,6 +142,21 @@ An example is as shown below.
 }
 ```
 
+POST
+projects/project_set/<br>
+Sending a POST request with the body
+```text
+project_id=13&set_ids=[28,29,34]
+```
+Will create a projectSet association for each set Id in the given array
+
+DELETE
+projects/project_set/{projectSetId}<br>
+Sending a post request to this URL with the projectSetId deletes the given projectSet association
+
+####More
+For full details of the other REST resources for this project please visit the app/Http/routes.php file.
+
 <hr>
 
 ##Reports
@@ -155,3 +170,8 @@ The final stage of this web panel is to produce a report for a specified project
 
 ##ERD
 <img src="http://i.imgur.com/O0JfNSa.png">
+
+##Disclaimer
+This project was written by me in 2016 during summer for a client who wishes to remain anonymous.
+Therefore, this repository is only to showcase my work. I give no permission for anyone to use this project or any part of it in any shape or form.
+Hence the omission of a license.
