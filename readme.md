@@ -1,5 +1,7 @@
 # EstimationSuite-API
 This project is a REST API developed using Laravel. This API compliments the client side C# application I developed.
+The link to that project is as follows.
+https://github.com/uche1/EstimationSuite/
 
 ##GET
 GET
