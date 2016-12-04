@@ -12,9 +12,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        for ($i =0; $i < 50; $i++) {
+        for ($i = 0; $i < 50; $i++) {
             DB::table('projects')->insert([
-                'name' => str_random(25),
+                'name' => 'Project ' . ($i + 1),
                 'created_at' => Carbon::now()->timestamp,
                 'updated_at' => Carbon::now()->timestamp,
             ]);
@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
 
         for ($i =0; $i < 50; $i++) {
             DB::table('sets')->insert([
-                'name' => str_random(25),
+                'name' => 'Set ' . ($i + 1),
                 'created_at' => Carbon::now()->timestamp,
                 'updated_at' => Carbon::now()->timestamp,
             ]);
@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
 
         for ($i =0; $i < 50; $i++) {
             DB::table('parts')->insert([
-                'name' => str_random(25),
+                'name' => 'Part ' . ($i + 1),
                 'weight' => $this->randomDouble(),
                 'units' => random_int(1, 50),
                 'stock' => random_int(1, 50),
