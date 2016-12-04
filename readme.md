@@ -1,5 +1,7 @@
 # EstimationSuite-API
 This project is a REST API developed using Laravel. This API compliments the client side C# application I developed.
+<br>Below, is the link to the complimentary project
+https://github.com/uche1/EstimationSuite/
 
 ##GET
 GET
@@ -20,48 +22,59 @@ Submitting a request to the resource with a given project Id returns the project
 the list of sets it's associated with, and the list of parts each project set is associated with
 ```json
 {
-  "id": 1,
-  "name": "az7QiMCg5ws9KZxFpnQ8M5puj",
-  "created_at": "2016-08-01 04:48:23",
-  "updated_at": "2016-08-01 04:48:23",
+  "id": 14,
+  "name": "Project 14",
+  "created_at": "2016-12-04 01:28:10",
+  "updated_at": "2016-12-04 01:28:10",
   "sets": [
     {
-      "id": 34,
-      "name": "RlHD8KR21Z5JCXm9212YvBjWS",
-      "created_at": "2016-08-01 04:48:24",
-      "updated_at": "2016-08-01 04:48:24",
+      "id": 1,
+      "name": "Set 1",
+      "created_at": "2016-12-04 01:28:10",
+      "updated_at": "2016-12-04 01:28:10",
+      "parts": [],
+      "pivot": {
+        "project_id": 14,
+        "set_id": 1,
+        "id": 24
+      }
+    },
+    {
+      "id": 9,
+      "name": "Set 9",
+      "created_at": "2016-12-04 01:28:10",
+      "updated_at": "2016-12-04 01:28:10",
+      "parts": [],
+      "pivot": {
+        "project_id": 14,
+        "set_id": 9,
+        "id": 1
+      }
+    },
+    {
+      "id": 11,
+      "name": "Set 11",
+      "created_at": "2016-12-04 01:28:10",
+      "updated_at": "2016-12-04 01:28:10",
       "parts": [
         {
-          "id": 4,
-          "name": "c2Qb6BXT39oO0s4lxxE3BLhAo",
-          "weight": 45.26,
-          "units": 46,
-          "stock": 5,
-          "length": 30.1,
-          "width": 32.37,
-          "sales_price": 4.4,
-          "purchase_price": 20.27,
-          "created_at": 1470026904,
-          "updated_at": 1470026904
-        },
-        {
-          "id": 42,
-          "name": "7oxKX6l0ob4D9CfogfpMGCpwP",
-          "weight": 37.23,
-          "units": 39,
-          "stock": 45,
-          "length": 42.46,
-          "width": 5.48,
-          "sales_price": 41.41,
-          "purchase_price": 32.24,
-          "created_at": 1470026904,
-          "updated_at": 1470026904
+          "id": 24,
+          "name": "Part 24",
+          "weight": 39.2,
+          "units": 40,
+          "stock": 34,
+          "length": 5.16,
+          "width": 17.32,
+          "sales_price": 8.48,
+          "purchase_price": 9.43,
+          "created_at": 1480814891,
+          "updated_at": 1480814891
         }
       ],
       "pivot": {
-        "project_id": 1,
-        "set_id": 34,
-        "id": 48
+        "project_id": 14,
+        "set_id": 11,
+        "id": 50
       }
     }
   ]
@@ -119,9 +132,9 @@ An example is as shown below.
 ```json
 {
   "id": 1,
-  "name": "xrf4BbqCUyTlIMwu5V1dZsnVD",
-  "created_at": "2016-08-01 04:48:24",
-  "updated_at": "2016-08-01 04:48:24"
+  "name": "Set 1",
+  "created_at": "2016-12-04 01:28:10",
+  "updated_at": "2016-12-04 01:28:10"
 }
 ```
 
@@ -129,16 +142,16 @@ An example is as shown below.
 ```json
 {
   "id": 1,
-  "name": "HmJ2ZpQwj2RTn3Y4JVR0zCG5S",
-  "weight": 5.32,
-  "units": 30,
-  "stock": 14,
-  "length": 15.49,
-  "width": 46.19,
-  "sales_price": 6.28,
-  "purchase_price": 50.31,
-  "created_at": "2016-08-01 04:48:24",
-  "updated_at": "2016-08-01 04:48:24"
+  "name": "Part 1",
+  "weight": 35.48,
+  "units": 16,
+  "stock": 17,
+  "length": 30.16,
+  "width": 7.15,
+  "sales_price": 47.6,
+  "purchase_price": 16.11,
+  "created_at": "2016-12-04 01:28:10",
+  "updated_at": "2016-12-04 01:28:10"
 }
 ```
 
