@@ -177,7 +177,7 @@ GET
 reports/project/{id}<br>
 The final stage of this web panel is to produce a report for a specified project.
 <br>Submitting a GET request to the resource above will then generate a report for the end user(my client).
-<img src="http://i.imgur.com/2CaA0yr.png">
+<img src="http://i.imgur.com/sfvOX5w.png">
 
 <hr>
 
