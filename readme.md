@@ -98,7 +98,7 @@ If successful it returns
 {"name":"New fancy project","updated_at":"2016-12-03 02:47:19","created_at":"2016-12-03 02:47:19","id":51}
 ```
 
-##Put
+##PUT
 PUT
 /api/projects/{id}
 
@@ -113,7 +113,7 @@ If successful it returns
 {"id":51,"name":"Demo 4 GitHub","created_at":"2016-12-03 02:47:19","updated_at":"2016-12-03 02:50:11"}
 ```
 
-##Delete
+##DELETE
 DELETE
 /api/projects/{id}<br>
 Submitting a DELETE request to the resource above with a given project Id deletes that specific project from the database.
