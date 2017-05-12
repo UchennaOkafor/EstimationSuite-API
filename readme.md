@@ -3,7 +3,7 @@ This project is a REST API developed using Laravel. This API compliments the cli
 <br>Below, is the link to the complimentary project
 https://github.com/uche1/EstimationSuite/
 
-##GET
+## GET
 GET
 /api/projects/<br>
 Submitting a GET request to the resource above returns a json array containing a list of all projects in the database.
@@ -98,7 +98,7 @@ If successful it returns
 {"name":"New fancy project","updated_at":"2016-12-03 02:47:19","created_at":"2016-12-03 02:47:19","id":51}
 ```
 
-##PUT
+## PUT
 PUT
 /api/projects/{id}
 
@@ -113,7 +113,7 @@ If successful it returns
 {"id":51,"name":"Demo 4 GitHub","created_at":"2016-12-03 02:47:19","updated_at":"2016-12-03 02:50:11"}
 ```
 
-##DELETE
+## DELETE
 DELETE
 /api/projects/{id}<br>
 Submitting a DELETE request to the resource above with a given project Id deletes that specific project from the database.
@@ -123,7 +123,7 @@ Submitting a DELETE request to the resource above with a given project Id delete
 ```
 <hr>
 
-##Other resources
+## Other resources
 This same REST principals also applies to the resources _/api/sets_ and _/api/parts_. 
 The only difference is that, when sending a GET request to  _/api/sets_/{id} or  _/api/parts_/{id}, they do not return a list of all projects they are associated with.
 An example is as shown below.
@@ -167,12 +167,12 @@ DELETE
 projects/project_set/{projectSetId}<br>
 Sending a post request to this URL with the projectSetId deletes the given projectSet association
 
-####More
+#### More
 For full details of the other REST resources for this project please visit the app/Http/routes.php file.
 
 <hr>
 
-##Reports
+## Reports
 GET
 reports/project/{id}<br>
 The final stage of this web panel is to produce a report for a specified project.
@@ -181,9 +181,9 @@ The final stage of this web panel is to produce a report for a specified project
 
 <hr>
 
-##ERD
+## ERD
 <img src="http://i.imgur.com/O0JfNSa.png">
 
-##Disclaimer
+## Disclaimer
 This project was written by me in 2016 during summer for a client who wishes to remain anonymous.
 Therefore, this repository is only to showcase my work. I give no permission for anyone to use this project or any part of it in any shape or form. Hence the omission of a license.
